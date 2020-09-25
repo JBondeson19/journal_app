@@ -1,0 +1,2 @@
+class ClientAdminsController < ApplicationController
+end

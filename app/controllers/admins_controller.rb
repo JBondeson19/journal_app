@@ -7,17 +7,18 @@ class AdminsController < ApplicationController
     end
 
     def show 
-    end
-
-
-
-
-
-
- private
-
-    def find_admin
         @admin = Admin.find(params[:id])
     end
+
+
+
+
+
+
+#  private
+
+#     def find_admin
+#         @admin = Admin.find(params[:id])
+#     end
 
 end

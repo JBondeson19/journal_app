@@ -29,4 +29,5 @@ end
                  location: Faker::Games::ElderScrolls.region,
                  age: Faker::Date.birthday #age is date-of-birth
     )
+
 end

@@ -10,8 +10,8 @@ class ClientsController < ApplicationController
 
 private
 
-    def admin_params
-        params.require(:client).permit(:name, :email, :license, :specialization, :location)
+    def client_params
+        params.require(:client).permit(:name, :email, :location, :age)
     end
 
     

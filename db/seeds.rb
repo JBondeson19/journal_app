@@ -31,3 +31,11 @@ end
     )
 
 end
+
+
+20.times do
+    ClientAdmin.create(
+        client: Client.all.sample, 
+        admin: Admin.all.sample
+    )
+end

@@ -1,5 +1,8 @@
 <h1>Directory of Health Proffesionals</h1>
 
-<% @admin.each do |admin| %>
-
-<div><%= admin.name %></div>
+<% @admins.each do |admin|%>
+    <ul>
+        <li><%=link_to admin.name, admin_path(admin)%></li>
+        <br>
+    </ul>
+    <%end%>

@@ -1,23 +1,24 @@
 class AdminsController < ApplicationController
 
-    before_action, only: [:show, :index]
- 
+    before_action :require_login
+    
     def index
        @admins = Admin.all 
     end
 
     def show 
+        @admin = Admin.find(params[:id])
     end
-
-
-
-
 
 
  private
 
-    def find_admin
-        @admin = Admin.find(params[:id])
+    def admin_params
+        params.require(:admin).permit(:name, :email, :license, :specialization, :location)
+    end
+
+    def require_login
+      return head(:forbidden) unless session.include? :user_id
     end
 
 end

@@ -1,12 +1,16 @@
+<%= render partial: "helpers/header" %>
+
 <h1> <%= @admin.name %></h1>
 
 
-
-<p>  Admin Email:  <%= @admin.email %><br>
+<div>
+Admin Email:  <%= @admin.email %><br>
 Location: <%= @admin.location %> <br>
  Specialization: <%= @admin.specialization %> <br>
  License: <%= @admin.license %>
-</p>
+
+
+</div>
 
 
 

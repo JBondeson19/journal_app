@@ -21,19 +21,23 @@
   <a class="item">
   <%=link_to "Create Client", new_client_path %> 
   </a>
-  <a class="item">
-  <%=link_to "Login", '/login' %> 
-  </a>
-  <a class="item">
-  <%=link_to "Logout", '/logout' %> 
-  </a>
+  
   <div class="right menu">
+
     <div class="item">
       <div class="ui icon input">
         <input type="text" placeholder="Search...">
         <i class="search link icon"></i>
       </div>
     </div>
+    <a class="item">
+    <%=link_to "Login", '/login' %> 
+    </a>
+    <a class="item">
+    <%=link_to "Logout", '/logout' %> 
+    </a>
+
+
     <a class="ui item">
         <%=link_to "New Account", new_user_path %> 
     </a>

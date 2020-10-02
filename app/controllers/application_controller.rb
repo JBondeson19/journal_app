@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
     helper_method :current_user, :current_username, :logged_in?
 
+    
     def current_user
         return User.find_by(id: session[:user_id])
     end
@@ -21,12 +22,6 @@ class ApplicationController < ActionController::Base
             flash[:message] = "You must be logged in to do that"
             redirect_to login_path
         end
-    end
-    
-    def hello_people
-        @person_name = params[:name]
-        @person_name ||= "Everyone"
-        render "hello"
     end
     
 end

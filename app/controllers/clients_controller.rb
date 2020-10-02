@@ -14,6 +14,7 @@ class ClientsController < ApplicationController
 
     def new 
         @client = Client.new 
+        render :new
     end 
 
     def edit 
@@ -27,7 +28,7 @@ class ClientsController < ApplicationController
 
 
         if @client.update(client_params)
-            redirect_to client_path(@client)
+            redirect_to client_path(@client[:id])
           else 
             render :edit 
           end

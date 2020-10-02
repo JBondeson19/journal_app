@@ -9,14 +9,23 @@
 Location: <%= @client.location %><br>
 Birthday: <%= @client.age %><br>
 
-<%= link_to "Edit this client", edit_client_path(@client) %>
 
-<%= link_to "Delete this client", client_path(@client.id), 
-    method: "delete", 
-    data: {:confirm => "Are You Sure?"}%>
+
+
 
  </p>
+ <div class="ui buttons">
+ <button class="fluid ui button" class="ui button"><%= link_to "Edit this client", edit_client_path(@client) %></button>
+ <div class="or"></div>
+ <button class="fluid ui button" class="ui positive button"><%= link_to "Delete this client", client_path(@client.id), 
+ method: "delete", 
+ data: {:confirm => "Are You Sure?"}%></button>
+</div>
 
+<br>
+<br>
+<br>
+<br>
 
  <%= render partial: "helpers/footer" %>
 

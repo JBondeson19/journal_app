@@ -1,4 +1,4 @@
-<%= render partial: "helpers/error_list", locals: {new_object: @client} %>
+<%=render partial: "helpers/error_list", locals: {new_object: @client} %>
 
 
 <%= form_for @client do |f|=%>
@@ -14,8 +14,7 @@
     <%= f.label :age%>
     <%= f.number_field :age %>
     <br>
-    
-    <button class="ui inverted orange button"> submit </button>
+    <%= f. submit %>
 
 <%end%>
    

@@ -1,5 +1,6 @@
+<%= render partial: "helpers/header" %>
 <h1>Directory of Health Proffesionals</h1>
-
+<img class="ui fluid image" src="/assets/docs.jpg">
 <% @admins.each do |admin|%>
     <ul>
         <li><%=link_to admin.name, admin_path(admin)%></li>

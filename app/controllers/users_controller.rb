@@ -22,7 +22,7 @@ class UsersController <ApplicationController
     def logout
         session.clear 
         flash[:message] = "You are now logged out"
-        redirect_to admins_path
+        redirect_to "/login"
 
     end
 

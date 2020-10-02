@@ -2,10 +2,13 @@
 <h1>All Clients </h1> 
 <img class="ui right floated image" class="ui large image" " src="/assets/client.jpg">
 
+
 <% @clients.each do |client|%>
     <ul>
         <li><%=link_to client.name, client_path(client)%></li>
     </ul>
 <%end%>
+
+
 
 

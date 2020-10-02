@@ -9,7 +9,7 @@ class UsersController <ApplicationController
 
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id 
-            redirect_to clients_path
+            redirect_to client_path
 
         else 
             flash.now[:no_user] = "Wrong username or password"

@@ -2,6 +2,10 @@ class ClientsController < ApplicationController
    
     def index
         @clients = Client.all
+
+        cookies[:times_visited] ||= 0
+        cookies[:times_visited] = cookies[:times_visited].to_i + 1
+        render(:index)
     end
 
     def show 

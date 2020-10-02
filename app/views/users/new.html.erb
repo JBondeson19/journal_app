@@ -1,12 +1,12 @@
 <%= render partial: "helpers/header" %>
 <h1 class="ui red inverted header" >Create an  Account to Access Our Database of Clients and Admins</h1>
 
-<%= form_for @user do |f| %>
+<%= form_for @user, html: {class:"ui form"} do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %>
     <%= f.label :password %>
     <%= f.password_field :password %>
-    <%= f.submit %>
+    <%= f.submit class:"yellow button ui"%>
 <% end %>
 
 

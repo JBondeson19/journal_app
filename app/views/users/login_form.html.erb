@@ -1,10 +1,24 @@
 <%= flash.now[:no_user]%>
 <%= flash[:message] %>
 
-<%= form_tag login_path do %>
+<%= render partial: "helpers/header" %>
+<h1 style= "text-align: center" class= "ui red inverted header"> Login </h1>
+
+<%= form_tag login_path, class:"ui form" do %>
+
+    <div class="field">
     <%= label_tag :username %>
     <%= text_field_tag :username %>
+    </div>
+
+    <div class="field">
     <%= label_tag :password %>
     <%= password_field_tag :password %>
-    <%= submit_tag "Login" %>
+    </div>
+
+    <div class="yellow button ui">
+         <%= submit_tag "Login" %>
+    </div>
+
 <% end %>
+

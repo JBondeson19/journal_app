@@ -5,11 +5,11 @@ class UsersController <ApplicationController
     end
 
     def process_login
-        user = User.find_by(username :params[:username])
+        user = User.find_by(username: params[:username])
 
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id 
-            redirect_to client_path
+            redirect_to clients_path
 
         else 
             flash.now[:no_user] = "Wrong username or password"

@@ -2,11 +2,21 @@
 
 <br>
 
-<h3> Client Email:  <%= @client.email %></h3>
+<p> Client Email:  <%= @client.email %>
+
+<br>
+Location: <%= @client.location %><br>
+Birthday: <%= @client.age %><br>
+
+<%= link_to "Edit this client", edit_client_path(@client) %>
+
+<%= link_to "Delete this client", client_path(@client.id), 
+    method: "delete", 
+    data: {:confirm => "Are You Sure?"}%>
+
+ </p>
 
 
-<h3> Location: <%= @client.location %></h3>
-<h3> Birthday: <%= @client.age %></h3>
-
+ <%= render partial: "helpers/footer" %>
 
 

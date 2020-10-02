@@ -3,7 +3,5 @@
 <% @clients.each do |client|%>
     <ul>
         <li><%=link_to client.name, client_path(client)%></li>
-        <%=client.age%>
-        <br>
     </ul>
-    <%end%>
+<%end%>

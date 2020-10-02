@@ -1,0 +1,20 @@
+<%= render partial: "helpers/error_list", locals: {new_object: @client} %>
+
+
+<%= form_for @client do |f|=%>
+    <%= f.label :email %>
+    <%= f.text_field :email%>
+    <br>
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+    <br>
+    <%= f.label :location%>
+    <%= f.text_field :location%>
+    <br>
+    <%= f.label :age%>
+    <%= f.number_field :age %>
+    <br>
+    <%= f. submit %>
+
+<%end%>
+   
